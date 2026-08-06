@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tian Lan (兰天) · Homepage</title>
+<meta name="description" content="Tian Lan's academic homepage — research on automatic evaluation and long-horizon agents.">
+
+<!-- favicon：先用简单的字母图标，之后可以换成自己的 logo -->
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+<!-- 谷歌字体：Inter 用于正文，Poppins 用于标题，营造清新现代感 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ 顶部移动端导航栏（仅小屏幕显示） ============ -->
+<header class="mobile-topbar">
+  <a class="mobile-topbar__name" href="#top">Tian Lan</a>
+  <button class="mobile-topbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="layout" id="top">
+
+  <!-- ============ 左侧侧边栏：头像、姓名、简介、社交链接、导航 ============ -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- 头像 -->
+    <img class="avatar" src="assets/img/avatar.jpg" alt="Tian Lan">
+
+    <h1 class="sidebar__name">Tian Lan <span class="sidebar__name-zh">(兰天)</span></h1>
+    <p class="sidebar__title">Algorithm Expert, Alibaba Token Hub (ATH-MaaS)</p>
+    <p class="sidebar__org">Ph.D., Beijing Institute of Technology</p>
+
+    <p class="sidebar__bio">
+      I work on <strong>automatic evaluation</strong> and <strong>long-horizon agents</strong>,
+      bridging academic research with real-world LLM applications.
+    </p>
+
+    <!-- 社交 / 联系方式图标 -->
+    <div class="sidebar__socials">
+      <a href="mailto:lantiangmftby@gmail.com" title="Email" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.4 5.9a.75.75 0 0 0 .8 0l7.4-5.9a1 1 0 0 0-.3-.05H4.5a1 1 0 0 0-.3.05ZM20 7.2l-7 5.6a2.75 2.75 0 0 1-3 0L3 7.2v11.3c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V7.2Z"/></svg>
+      </a>
+      <a href="https://github.com/gmftbyGMFTBY" title="GitHub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.52.1.71-.23.71-.5v-1.95c-2.92.64-3.54-1.28-3.54-1.28-.48-1.22-1.17-1.55-1.17-1.55-.96-.66.07-.64.07-.64 1.06.07 1.62 1.09 1.62 1.09.94 1.62 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.42-2.33-.27-4.79-1.17-4.79-5.2 0-1.15.41-2.09 1.08-2.82-.11-.27-.47-1.34.1-2.8 0 0 .88-.28 2.88 1.08a9.9 9.9 0 0 1 5.24 0c2-1.36 2.88-1.08 2.88-1.08.57 1.46.21 2.53.1 2.8.68.73 1.08 1.67 1.08 2.82 0 4.04-2.47 4.92-4.81 5.18.38.33.72.97.72 1.96v2.9c0 .28.18.6.72.5A10.5 10.5 0 0 0 12 1.5Z"/></svg>
+      </a>
+      <a href="https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN" title="Google Scholar" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V15h2V9L12 3Zm0 2.26L18.82 9 12 12.74 5.18 9 12 5.26ZM7 12.28l5 2.72 5-2.72v4.63L12 18.9l-5-2.99v-4.63Z"/></svg>
+      </a>
+    </div>
+
+    <!-- 导航：会随滚动高亮当前板块，见 assets/js/main.js -->
+    <nav class="sidebar__nav" aria-label="Section navigation">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#highlights" class="nav-link">Highlights</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#publications" class="nav-link">Publications</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#awards" class="nav-link">Awards</a>
+      <a href="#talks" class="nav-link">Talks</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1Zm0 15a1 1 0 0 1 1 1V22a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1ZM4.5 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1.5a1 1 0 0 1 1 1Zm17 0a1 1 0 0 1-1 1H19a1 1 0 1 1 0-2h1.5a1 1 0 0 1 1 1ZM6.34 6.34a1 1 0 0 1-1.42 0L3.87 5.29a1 1 0 1 1 1.41-1.41l1.06 1.05a1 1 0 0 1 0 1.41Zm11.32 11.32a1 1 0 0 1-1.41 0l-1.06-1.05a1 1 0 0 1 1.41-1.41l1.06 1.05a1 1 0 0 1 0 1.41ZM6.34 17.66l-1.06 1.05a1 1 0 1 1-1.41-1.41l1.05-1.06a1 1 0 1 1 1.42 1.42Zm11.32-11.32L16.6 7.4a1 1 0 1 1-1.41-1.42l1.05-1.05a1 1 0 0 1 1.42 1.41ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.7 14.9a8.8 8.8 0 0 1-10.6-10.6c.15-.6-.48-1.1-1.02-.8A10 10 0 1 0 21.5 15.9c.3-.53-.2-1.15-.8-1Z"/></svg>
+    </button>
+
+  </aside>
+
+  <!-- ============ 右侧主内容区 ============ -->
+  <main class="content">
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2 class="section__title">About Me</h2>
+      <p>
+        I am currently an <strong>Algorithm Expert</strong> at <strong>Alibaba Token Hub (ATH) – MaaS</strong>,
+        where I focus on automatic evaluation and long-horizon agent technologies, driving both frontier
+        research and real-world business applications. I joined Alibaba through the 2025 <strong>Alistar (阿里星)</strong>
+        campus recruitment program. I received my Ph.D. in Computer Science and
+        Technology from <strong>Beijing Institute of Technology (BIT)</strong>.
+      </p>
+      <p>
+        My work spans both academia and industry: I have published extensively at top-tier venues including
+        <strong>ICLR</strong>, <strong>NeurIPS</strong>, <strong>ACL</strong>, <strong>EMNLP</strong>, and
+        <strong>TOIS</strong>, with representative works such as <em>Copy is All You Need</em>,
+        <em>Block-Attention</em>, and <em>Contrastive Search</em>, accumulating over 1,700 citations on
+        Google Scholar.
+      </p>
+      <p>
+        I regularly serve as a reviewer for top-tier conferences and journals, including
+        <strong>ICLR</strong>, <strong>AAAI</strong>, <strong>NeurIPS</strong>, <strong>ACL ARR</strong>,
+        <strong>ICML</strong>, and <strong>TOIS</strong>.
+      </p>
+      <p>
+        <em>I'm always happy to discuss research on long-horizon agents, automatic evaluation, and large
+        language models.</em> Feel free to reach out via email if you'd like to collaborate.
+      </p>
+    </section>
+
+    <!-- Recent Highlights -->
+    <section id="highlights" class="section">
+      <h2 class="section__title">Recent Highlights</h2>
+      <ul class="news-list">
+        <li><span class="news-date">Jul. 2026.</span> Two papers accepted to <strong>ACM MM 2026</strong>, covering multi-modal understanding and generation.</li>
+        <li><span class="news-date">Jul. 10th, 2026.</span> <strong>HSCodeComp</strong>, our challenging benchmark on agents' ability to apply complex expert-domain rules, won the <strong class="text-award">ACL 2026 Best Resource Award</strong>.</li>
+        <li><span class="news-date">Apr. 30th, 2026.</span> One paper accepted to <strong>ICML 2026</strong>, on agentic memory.</li>
+        <li><span class="news-date">Apr. 4th, 2026.</span> Five papers accepted to <strong>ACL 2026</strong>, covering agent systems, reasoning, and more.</li>
+        <li><span class="news-date">Mar. 2026.</span> Released <strong>Marco DeepResearch Agent</strong>, the best agentic search model at the 8B scale.</li>
+        <li><span class="news-date">Nov. 2025.</span> One paper accepted to <strong>AAAI 2026</strong>, on long-document generation.</li>
+        <li><span class="news-date">Oct. 23rd, 2025.</span> Released <strong>DeepWideSearch</strong>, a benchmark for long-horizon agentic search.</li>
+        <li><span class="news-date">Oct. 24th, 2025.</span> Released the <strong>Marco DeepResearch</strong> project.</li>
+        <li><span class="news-date">Aug. 2025.</span> One paper accepted to <strong>EMNLP 2025</strong>, on enhancing LLMs' self-critique ability.</li>
+        <li><span class="news-date">Sep. 2024.</span> One paper, <strong>CriticEval</strong>, accepted to <strong>NeurIPS 2024</strong>.</li>
+        <li><span class="news-date">Jan. 2023.</span> One paper accepted to <strong>ICLR 2023</strong>, on retrieval-augmented text generation.</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2 class="section__title">Education</h2>
+      <ul class="edu-list">
+        <li class="edu-item">
+          <div class="edu-item__main">
+            <span class="edu-item__degree">Ph.D. in Computer Science and Technology (Combined Master–Ph.D. Program)</span>
+            <span class="edu-item__school">Beijing Institute of Technology</span>
+          </div>
+          <span class="edu-item__time">2019 – 2025</span>
+        </li>
+        <li class="edu-item">
+          <div class="edu-item__main">
+            <span class="edu-item__degree">B.Eng. in Computer Science</span>
+            <span class="edu-item__school">Beijing Institute of Technology</span>
+          </div>
+          <span class="edu-item__time">2015 – 2019</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience（时间轴） -->
+    <section id="experience" class="section">
+      <h2 class="section__title">Experience</h2>
+      <ul class="timeline">
+        <li class="timeline__item timeline__item--left">
+          <div class="timeline__card">
+            <div class="timeline__row">
+              <span class="timeline__org">
+                <span class="timeline__logo-badge"><img src="assets/img/logos/alibaba.svg" alt="Alibaba"></span>
+                Alibaba Group
+              </span>
+              <span class="timeline__time">2025 – Present</span>
+            </div>
+            <div class="timeline__desc">
+              Algorithm Expert, Alibaba Token Hub (ATH) – MaaS · Agent systems<br>
+              Mentors: <a href="https://longyuewang.com/" target="_blank" rel="noopener">Longyue Wang</a>,
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=tsKl9GUAAAAJ" target="_blank" rel="noopener">Weihua Luo</a>
+            </div>
+            <div class="timeline__papers">
+              <a href="https://arxiv.org/abs/2602.10652" target="_blank" rel="noopener" class="pill">UMEM · ICML 2026</a>
+              <a href="https://arxiv.org/abs/2602.06724" target="_blank" rel="noopener" class="pill">Table-as-Search · ACL 2026</a>
+              <a href="https://arxiv.org/abs/2510.19631" target="_blank" rel="noopener" class="pill pill--award">HSCodeComp · ACL 2026 Best Resource</a>
+              <a href="https://arxiv.org/abs/2510.20168" target="_blank" rel="noopener" class="pill">DeepWideSearch</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline__item timeline__item--right">
+          <div class="timeline__card">
+            <div class="timeline__row">
+              <span class="timeline__org">
+                <span class="timeline__logo-badge"><img src="assets/img/logos/tencent.svg" alt="Tencent"></span>
+                Tencent TEG
+              </span>
+              <span class="timeline__time">Apr. 2025 – Jun. 2025</span>
+            </div>
+            <div class="timeline__desc">AI Platform Department · AI applications in gaming</div>
+            <div class="timeline__papers">
+              <a href="https://arxiv.org/abs/2409.15355" target="_blank" rel="noopener" class="pill">Block-Attention · ICLR 2025</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline__item timeline__item--left">
+          <div class="timeline__card">
+            <div class="timeline__row">
+              <span class="timeline__org">
+                <span class="timeline__logo-badge"><img src="assets/img/logos/shanghai-ai-lab.png" alt="Shanghai AI Lab"></span>
+                Shanghai AI Lab
+              </span>
+              <span class="timeline__time">Jul. 2023 – Jan. 2025</span>
+            </div>
+            <div class="timeline__desc">
+              InternLM Post-training Group · Research on LLM critique ability<br>
+              Mentor: <a href="https://zhangwenwei.cn/" target="_blank" rel="noopener">Wenwei Zhang</a>
+            </div>
+            <div class="timeline__papers">
+              <a href="https://arxiv.org/abs/2402.13764" target="_blank" rel="noopener" class="pill">CriticEval · NeurIPS 2024</a>
+              <a href="https://arxiv.org/abs/2410.15287" target="_blank" rel="noopener" class="pill">Training LMs to Critique · EMNLP 2025</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline__item timeline__item--right">
+          <div class="timeline__card">
+            <div class="timeline__row">
+              <span class="timeline__org">
+                <span class="timeline__logo-badge"><img src="assets/img/logos/mihoyo.svg" alt="miHoYo"></span>
+                miHoYo
+              </span>
+              <span class="timeline__time">Feb. 2023 – Jun. 2023</span>
+            </div>
+            <div class="timeline__desc">
+              NLP Lab · Game AI &amp; domain-specific model post-training<br>
+              Mentor: <a href="https://libertywing.github.io/yanwang.github.io/" target="_blank" rel="noopener">Yan Wang</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline__item timeline__item--left">
+          <div class="timeline__card">
+            <div class="timeline__row">
+              <span class="timeline__org">
+                <span class="timeline__logo-badge"><img src="assets/img/logos/tencent.svg" alt="Tencent"></span>
+                Tencent AI Lab
+              </span>
+              <span class="timeline__time">Jun. 2021 – Jan. 2023</span>
+            </div>
+            <div class="timeline__desc">
+              Text generation &amp; retrieval-augmented generation<br>
+              Mentors: <a href="https://libertywing.github.io/yanwang.github.io/" target="_blank" rel="noopener">Yan Wang</a>,
+              <a href="https://jcyk.github.io/" target="_blank" rel="noopener">Deng Cai</a>
+            </div>
+            <div class="timeline__papers">
+              <a href="https://arxiv.org/abs/2307.06962" target="_blank" rel="noopener" class="pill">Copy is All You Need</a>
+              <a href="https://arxiv.org/abs/2110.06612" target="_blank" rel="noopener" class="pill">Dense Retrieval for Dialogue · TOIS 2024</a>
+              <a href="https://arxiv.org/abs/2205.02655" target="_blank" rel="noopener" class="pill">Language Models Can See</a>
+              <a href="https://arxiv.org/abs/2111.04198" target="_blank" rel="noopener" class="pill">TaCL</a>
+              <a href="https://arxiv.org/abs/2202.06417" target="_blank" rel="noopener" class="pill">Contrastive Search</a>
+              <a href="https://arxiv.org/abs/2510.26697" target="_blank" rel="noopener" class="pill">AutoDeco · ICLR 2026</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline__item timeline__item--right">
+          <div class="timeline__card">
+            <div class="timeline__row">
+              <span class="timeline__org">
+                <span class="timeline__logo-badge"><img src="assets/img/logos/ibm.svg" alt="IBM"></span>
+                IBM Research – China
+              </span>
+              <span class="timeline__time">2019</span>
+            </div>
+            <div class="timeline__desc">Research Intern · Dialogue systems</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <h2 class="section__title">
+        Selected Publications
+        <a href="https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN" target="_blank" rel="noopener" class="section__title-link" title="Google Scholar">Google Scholar ↗</a>
+      </h2>
+      <p class="section__note"><sup>*</sup> indicates equal contribution.</p>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2510.19631" target="_blank" rel="noopener">HSCodeComp: A Realistic and Expert-level Agent Benchmark for Hierarchical Rule Application</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong><sup>*</sup>, Yiqian Yang<sup>*</sup>, Qianghuai Jia, Li Zhu, Hui Jiang, Hang Zhu, Weihua Luo, Longyue Wang</p>
+        <p class="pub__venue"><span class="badge">ACL 2026</span> <span class="badge badge--award">Best Resource Award</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2510.19631" class="pill" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2602.06724" target="_blank" rel="noopener">Table-as-Search: Agentic Information Seeking is Table Completion</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong>, Felix Henry, Bin Zhu, Qianghuai Jia, Junyang Ren, Qihang Pu, Haijun Li, Longyue Wang, Zhao Xu, Weihua Luo</p>
+        <p class="pub__venue"><span class="badge">ACL 2026, Findings</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2602.06724" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/AIDC-AI/Marco-Search-Agent" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2602.10652" target="_blank" rel="noopener">UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory</a></h3>
+        <p class="pub__authors">Yongshi Ye, Hui Jiang, Feihu Jiang, <strong>Tian Lan</strong>, Yichao Du, Biao Fu, Xiaodong Shi, Qianghuai Jia, Longyue Wang, Weihua Luo</p>
+        <p class="pub__venue"><span class="badge">ICML 2026</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2602.10652" class="pill" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2410.15287" target="_blank" rel="noopener">Training Language Models to Critique With Multi-agent Feedback</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong><sup>*</sup>, Wenwei Zhang<sup>*</sup>, Chengqi Lyu, Shuaibin Li, Chen Xu, Heyan Huang, Dahua Lin, Xian-Ling Mao, Kai Chen</p>
+        <p class="pub__venue"><span class="badge">EMNLP 2025, Findings</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2410.15287" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/gmftbyGMFTBY/MultiCritique" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://doi.org/10.1007/978-981-95-3346-6_38" target="_blank" rel="noopener">Automatic Evaluating Scientific Reviews Through Meta-reviewer's Lens: A Reliable Benchmark for Peer Review Generation</a></h3>
+        <p class="pub__authors">Shu-Hang Liu, <strong>Tian Lan</strong>, Yun-He Zhang, Ran Liu, Heyan Huang, Chen Xu, Zhijing Wu, Xian-Ling Mao</p>
+        <p class="pub__venue"><span class="badge">NLPCC 2025</span></p>
+        <p class="pub__links">
+          <a href="https://doi.org/10.1007/978-981-95-3346-6_38" class="pill" target="_blank" rel="noopener">Paper</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://aclanthology.org/2025.acl-long.356/" target="_blank" rel="noopener">SEOE: A Scalable and Reliable Semantic Evaluation Framework for Open Domain Event Detection</a></h3>
+        <p class="pub__authors">Yi-Fan Lu, Xian-Ling Mao, <strong>Tian Lan</strong>, Tong Zhang, Yu-Shi Zhu, Heyan Huang</p>
+        <p class="pub__venue"><span class="badge">ACL 2025</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2503.03303" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/Lyfralston/SEOE" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://aclanthology.org/2025.acl-long.1088/" target="_blank" rel="noopener">Automatic Evaluation for Text-to-image Generation: Task-decomposed Framework, Distilled Training, and Meta-evaluation Benchmark</a></h3>
+        <p class="pub__authors">Rong-Cheng Tu<sup>*</sup>, Zi-Ao Ma<sup>*</sup>, <strong>Tian Lan</strong><sup>*</sup>, Yuehao Zhao<sup>*</sup>, Heyan Huang, Xian-Ling Mao</p>
+        <p class="pub__venue"><span class="badge">ACL 2025</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2411.15488" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/maziao/T2I-Eval" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2409.15355" target="_blank" rel="noopener">Block-Attention for Efficient Prefilling</a></h3>
+        <p class="pub__authors">Dongyang Ma, Yan Wang, <strong>Tian Lan</strong></p>
+        <p class="pub__venue"><span class="badge">ICLR 2025</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2409.15355" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/TemporaryLoRA/Block-Attention" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2403.01954" target="_blank" rel="noopener">Decider: A Dual-System Rule-Controllable Decoding Framework for Language Generation</a></h3>
+        <p class="pub__authors">Chen Xu, <strong>Tian Lan</strong>, Yu Ji, Changlong Yu, Wei Wang, Jun Gao, Qunxi Dong, Kun Qian, Piji Li, Wei Bi, Bin Hu</p>
+        <p class="pub__venue"><span class="badge">TKDE 2025</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2403.01954" class="pill" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2402.13764" target="_blank" rel="noopener">CriticEval: Evaluating Large-scale Language Model as Critic</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong><sup>*</sup>, Wenwei Zhang<sup>*</sup>, Chen Xu, Heyan Huang, Dahua Lin, Kai Chen, Xian-Ling Mao</p>
+        <p class="pub__venue"><span class="badge">NeurIPS 2024</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2402.13764" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/open-compass/CriticEval" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://doi.org/10.1145/3637528.3671847" target="_blank" rel="noopener">A Hierarchical Context Augmentation Method to Improve Retrieval-Augmented LLMs on Scientific Papers</a></h3>
+        <p class="pub__authors">Tian-Yi Che, Xian-Ling Mao, <strong>Tian Lan</strong>, Heyan Huang</p>
+        <p class="pub__venue"><span class="badge">SIGKDD 2024</span></p>
+        <p class="pub__links">
+          <a href="https://doi.org/10.1145/3637528.3671847" class="pill" target="_blank" rel="noopener">DOI</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2110.06612" target="_blank" rel="noopener">Exploring Dense Retrieval for Dialogue Response Selection</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong>, Deng Cai, Yan Wang, Yixuan Su, Heyan Huang, Xian-Ling Mao</p>
+        <p class="pub__venue"><span class="badge">TOIS 2024</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2110.06612" class="pill" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2310.10226" target="_blank" rel="noopener">Repetition In Repetition Out: Towards Understanding Neural Text Degeneration from the Data Perspective</a></h3>
+        <p class="pub__authors">Huayang Li, <strong>Tian Lan</strong>, Zihao Fu, Deng Cai, Lemao Liu, Nigel Collier, Taro Watanabe, Yixuan Su</p>
+        <p class="pub__venue"><span class="badge">NeurIPS 2023</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2310.10226" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/gmftbyGMFTBY/Rep-Dropout" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://doi.org/10.1145/3597609" target="_blank" rel="noopener">Towards Efficient Coarse-grained Dialogue Response Selection</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong>, Xian-Ling Mao, Wei Wei, Xiaoyan Gao, Heyan Huang</p>
+        <p class="pub__venue"><span class="badge">TOIS 2023</span></p>
+        <p class="pub__links">
+          <a href="https://doi.org/10.1145/3597609" class="pill" target="_blank" rel="noopener">DOI</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2307.06962" target="_blank" rel="noopener">Copy is All You Need</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong><sup>*</sup>, Deng Cai<sup>*</sup>, Yan Wang, Heyan Huang, Xian-Ling Mao</p>
+        <p class="pub__venue"><span class="badge">ICLR 2023</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2307.06962" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/gmftbyGMFTBY/Copyisallyouneed" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2202.06417" target="_blank" rel="noopener">A Contrastive Framework for Neural Text Generation</a></h3>
+        <p class="pub__authors">Yixuan Su, <strong>Tian Lan</strong>, Yan Wang, Dani Yogatama, Lingpeng Kong, Nigel Collier</p>
+        <p class="pub__venue"><span class="badge">NeurIPS 2022, Spotlight</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2202.06417" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/yxuansu/SimCTG" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2204.08887" target="_blank" rel="noopener">Cross-Lingual Phrase Retrieval</a></h3>
+        <p class="pub__authors">Heqi Zheng<sup>*</sup>, Xiao Zhang<sup>*</sup>, Zewen Chi<sup>*</sup>, Heyan Huang, Yan Tan, <strong>Tian Lan</strong>, Wei Wei, Xian-Ling Mao</p>
+        <p class="pub__venue"><span class="badge">ACL 2022</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2204.08887" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/cwszz/XPR" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2205.02655" target="_blank" rel="noopener">Language Models Can See: Plugging Visual Controls in Text Generation</a></h3>
+        <p class="pub__authors">Yixuan Su, <strong>Tian Lan</strong>, Yahui Liu, Fangyu Liu, Dani Yogatama, Yan Wang, Lingpeng Kong, Nigel Collier</p>
+        <p class="pub__venue"><span class="badge">Preprint</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2205.02655" class="pill" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/yxuansu/MAGIC" class="pill" target="_blank" rel="noopener">Code</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub__title"><a href="https://arxiv.org/abs/2004.02399" target="_blank" rel="noopener">PONE: A Novel Automatic Evaluation Metric for Open-Domain Generative Dialogue Systems</a></h3>
+        <p class="pub__authors"><strong>Tian Lan</strong>, Xian-Ling Mao, Wei Wei, Xiaoyan Gao, Heyan Huang</p>
+        <p class="pub__venue"><span class="badge">TOIS 2020</span></p>
+        <p class="pub__links">
+          <a href="https://arxiv.org/abs/2004.02399" class="pill" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <!-- 完整列表请对照 Google Scholar 补充：复制一份上面的 <article class="pub">...</article> 改内容即可新增一篇 -->
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2 class="section__title">Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3 class="project-card__title">Marco DeepResearch</h3>
+          <p class="project-card__desc">Alibaba's flagship agentic research effort on DeepResearch agents, covering agentic harness, agentic memory, self-evolving skills, and agentic search.</p>
+          <div class="project-card__tags"><span class="tag">Agent</span><span class="tag">DeepResearch</span><span class="tag">Agentic Search</span></div>
+          <div class="project-card__links"><a href="https://github.com/AIDC-AI/Marco-DeepResearch/" class="pill" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="project-card">
+          <h3 class="project-card__title">InternLM2</h3>
+          <p class="project-card__desc">An open-sourced large language model that outperforms its predecessors in comprehensive evaluations across multiple dimensions, notably in long-context modeling and reasoning.</p>
+          <div class="project-card__tags"><span class="tag">Contributor</span><span class="tag">LLM</span></div>
+          <div class="project-card__links"><a href="https://arxiv.org/abs/2403.17297" class="pill" target="_blank" rel="noopener">arXiv</a></div>
+        </article>
+        <article class="project-card">
+          <h3 class="project-card__title">PandaGPT</h3>
+          <p class="project-card__desc">One model to instruction-follow them all: a general-purpose instruction-following model that combines the multimodal encoders of ImageBind with the reasoning power of large language models.</p>
+          <div class="project-card__tags"><span class="tag">Contributor</span><span class="tag">Multimodal</span></div>
+          <div class="project-card__links"><a href="https://panda-gpt.github.io/" class="pill" target="_blank" rel="noopener">Website</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="section">
+      <h2 class="section__title">Awards &amp; Honors</h2>
+      <ul class="simple-list">
+        <li><strong class="text-award">ACL 2026 Best Resource Award</strong> — for <a href="https://arxiv.org/abs/2510.19631" target="_blank" rel="noopener">HSCodeComp</a>.</li>
+        <li><strong>Alistar (阿里星)</strong> — Alibaba Group. 2025.</li>
+        <li><strong>National Scholarship (国家奖学金)</strong> — Beijing Institute of Technology. 2025.</li>
+        <li><strong>Tencent Qingyun Program (腾讯青云计划)</strong> — Tencent. 2025.</li>
+        <li><strong>Tencent Rhino-Bird Elite Intern Program (腾讯犀牛鸟计划菁英实习生)</strong> — Tencent. 2022.</li>
+        <li><strong>National Scholarship (国家奖学金)</strong> — Beijing Institute of Technology. 2017.</li>
+      </ul>
+    </section>
+
+    <!-- Talks -->
+    <section id="talks" class="section">
+      <h2 class="section__title">Talks</h2>
+      <ul class="simple-list">
+        <li><strong>DeepResearch Agent</strong> — Invited talk (Alibaba Cloud) at <strong>ACL 2026</strong>. 2026/07/08. <a href="assets/files/talks/CCF-2025-DeepResearchAgent.pdf" target="_blank" rel="noopener">[slides]</a></li>
+        <li><strong>UMEM</strong> — Invited talk at the <strong>China Generative AI Summit 2026</strong>. 2026/04. <a href="assets/files/talks/GenAISummit-2026-UMEM.pdf" target="_blank" rel="noopener">[slides]</a></li>
+        <li><strong>DeepResearch Agent</strong> at the 1st CCF Conference on Large Language Models &amp; AI Engineering. 2025/04. <a href="assets/files/talks/CCF-2025-DeepResearchAgent.pdf" target="_blank" rel="noopener">[slides]</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title">Contact</h2>
+      <p>
+        The best way to reach me is by email at
+        <a href="mailto:lantiangmftby@gmail.com">lantiangmftby@gmail.com</a>.
+        I'm also on <a href="https://github.com/gmftbyGMFTBY" target="_blank" rel="noopener">GitHub</a>
+        and <a href="https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+      <p class="footer-note">© <span id="year"></span> Tian Lan. Built with plain HTML/CSS/JS, hosted on GitHub Pages.</p>
+    </section>
+
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
