@@ -297,6 +297,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .edu-item__main { display: flex; flex-direction: column; }
 .edu-item__degree { font-weight: 600; }
 .edu-item__school { color: var(--text-muted); font-size: 14px; }
+.edu-item__advisor { color: var(--text-muted); font-size: 14px; margin-top: 2px; }
 .edu-item__time {
   flex-shrink: 0;
   color: var(--text-muted);
