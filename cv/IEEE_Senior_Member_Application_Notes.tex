@@ -1,0 +1,97 @@
+% ============================================================
+% IEEE Senior Member — Application System Notes (private reference)
+% Not linked from the public homepage; kept in assets/files/cv/ for
+% personal reference only.
+% Compile with: xelatex IEEE_Senior_Member_Application_Notes.tex
+% ============================================================
+\documentclass[10.5pt]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{microtype}
+
+\setmainfont{Charter}
+\newfontfamily\headingfont{Avenir Next Demi Bold}
+
+\definecolor{accent}{HTML}{1f4e8c}
+\definecolor{muted}{HTML}{5b6570}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\leftmargini}{1.2em}
+\renewcommand{\labelitemi}{\raisebox{0.15em}{\tiny\textbullet}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={IEEE Senior Member - Application System Notes},
+  pdfauthor={Tian Lan}
+}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{10pt}
+  {\color{accent}\Large\bfseries #1}\par
+  \vspace{2pt}
+  {\color{accent}\hrule height 1pt}
+  \vspace{6pt}
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{18}{22}\selectfont\bfseries IEEE Senior Member --- Application System Notes}\\[4pt]
+  {\small\color{muted} Personal reference notes, compiled Aug. 2026. Not an official IEEE document.}
+\end{center}
+
+\cvsection{No fixed official template}
+ieee.org does \textbf{not} publish a mandatory ``Senior Member CV template'' file. The actual official requirement lives inside the online application system at \href{https://nominate.ieee.org}{nominate.ieee.org}, which is a set of structured form fields rather than a single document. Some Regions (e.g., Region 3, Region 5) publish their own \textit{recommended} (not mandatory) resume templates to help candidates prepare, but these are volunteer-created aids, not ieee.org requirements.
+
+\cvsection{The application has four tabs}
+\begin{itemize}
+  \item \textbf{Application Info / Nominee Information} --- basic info; pre-fills once your IEEE member number is entered.
+  \item \textbf{Professional Experience} (Education + Employment) --- a \textbf{structured field}, not a free-form upload. For each entry you must provide:
+  \begin{itemize}
+    \item Organization name and address
+    \item Start date \textbf{and} end date, both to the \textbf{month and year} (not just the year)
+    \item Job title / degree
+    \item A description of duties and responsibilities
+  \end{itemize}
+  Reviewers specifically check that start/end dates make sense and do not illogically overlap (e.g., two full-time roles at once without explanation).
+  \item \textbf{Significant Performance} --- a \textbf{separate free-text box} (limit: 4997 characters), not the same as the CV attachment. Must describe discrete projects using: \textit{what you did (task) $\to$ your specific role $\to$ why it was significant (quantified impact) $\to$ time period}. Do \textbf{not} put awards/honors/thank-yous here. Dates need not be consecutive but must sum to $\geq$ 60 months. Do not pad past $\sim$70 months --- reviewers explicitly discourage over-filling this field.
+  \item \textbf{Attachments} --- this is where you \textbf{upload a PDF resume/CV}. A resume is mandatory; the format is not strictly enforced, but Region committees strongly encourage using month/year precision and detailed duty descriptions consistent with the Professional Experience tab, since a well-structured resume makes independent verification much easier for reviewers and reference-writers.
+  \item \textbf{References} --- up to 4 references; you need their IEEE membership numbers. If self-nominating, 3 references are required; if nominated by a Senior Member/Fellow, only 2 additional referrals are needed (the nomination itself counts as one).
+\end{itemize}
+
+\cvsection{Relationship between the CV attachment and the online fields}
+The uploaded CV/resume PDF (Attachments tab) is a \textbf{supplementary document}, not a substitute for filling in the Professional Experience and Significant Performance fields directly in the system. \textbf{Both must be completed}:
+\begin{itemize}
+  \item The \textbf{Significant Performance text box} in the online form is what the Admission \& Advancement (A\&A) Review Panel actually reads and scores against the eligibility criteria --- it must be filled in directly on the website.
+  \item The attached CV is useful context for reviewers and, especially, for your references/nominator, who may quote or draw on it when writing their referral. Uploading the ``Tian\_Lan\_CV\_IEEE\_SeniorMember.pdf'' document (which already contains a Significant Performance section written in the recommended task/role/why-significant/duration format) makes it very easy to copy-paste/adapt that section into the online text box when the time comes --- but the copy-paste step itself still needs to happen in the system.
+\end{itemize}
+
+\cvsection{Eligibility quick-check (IEEE Bylaw I-104.3)}
+\begin{itemize}
+  \item Ten years of professional practice in an IEEE-designated field (Computer Science / AI qualifies). Degree credit: Bachelor's = 3 yrs, Bachelor's+Master's = 4 yrs, Doctorate = 5 yrs. Credited years and actual work/school years for the \textbf{same period} cannot both be counted --- choose whichever combination gives the larger, most defensible total.
+  \item Five years (60+ months, not necessarily consecutive) of significant performance within that practice.
+  \item Three references, each currently holding IEEE Senior Member, Fellow, or Honorary Member grade.
+  \item No extra fee for the elevation itself; you must already be (or become) a paying IEEE Member first.
+\end{itemize}
+
+\cvsection{Process overview}
+\begin{enumerate}
+  \item Join/renew IEEE Membership (if not already a member).
+  \item Log in to \href{https://nominate.ieee.org}{nominate.ieee.org}; fill in Professional Experience, Education, Significant Performance, and Present Occupation tabs.
+  \item Upload the CV/resume PDF under Attachments.
+  \item Add 3 references (their IEEE numbers); wait for their status to change from ``Notified'' to ``Complete'' --- do \textbf{not} click Submit before that.
+  \item Submit at least 10 days before the next Region review-panel date.
+  \item Track status via the Senior Member Application Status Report; approval typically follows within $\sim$2 weeks of the panel review.
+\end{enumerate}
+
+\end{document}

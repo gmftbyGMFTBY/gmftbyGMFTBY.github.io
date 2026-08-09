@@ -1,0 +1,230 @@
+% ============================================================
+% Tian Lan (兰天) — CV for IEEE Senior Member Application
+% Formatted per IEEE Senior Member application guidance:
+%   - Education & employment listed with month/year, address, duties
+%   - Explicit tally of the "10 years of professional practice" and
+%     "5 years (60 months) of significant performance" requirements
+%   - Discrete "Significant Performance" write-ups (task / role / why
+%     significant / duration), separate from the plain job history
+% Compile with: xelatex Tian_Lan_CV_IEEE_SeniorMember.tex
+% ============================================================
+\documentclass[10.5pt]{article}
+
+\usepackage[margin=0.85in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{microtype}
+
+\setmainfont{Charter}
+\newfontfamily\headingfont{Avenir Next Demi Bold}
+\newfontfamily\cjkfont{Songti SC}
+
+\definecolor{accent}{HTML}{1f4e8c}
+\definecolor{muted}{HTML}{5b6570}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\leftmargini}{1.2em}
+\renewcommand{\labelitemi}{\raisebox{0.15em}{\tiny\textbullet}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={Tian Lan - CV for IEEE Senior Member Application},
+  pdfauthor={Tian Lan}
+}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{10pt}
+  {\color{accent}\headingfont\Large #1}\par
+  \vspace{2pt}
+  {\color{accent}\hrule height 1pt}
+  \vspace{6pt}
+}
+
+\newcommand{\pubitem}[1]{\par\noindent\hangindent=1.2em\hangafter=1 #1\par\vspace{4pt}}
+\newcommand{\venue}[1]{\textbf{\color{accent}#1}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ---------------- Header ----------------
+\begin{center}
+  {\headingfont\fontsize{20}{24}\selectfont Tian Lan} \quad {\cjkfont\fontsize{14}{18}\selectfont（兰天）}\\[3pt]
+  {\color{muted}\small Curriculum Vitae --- Prepared for IEEE Senior Member Application}\\[4pt]
+  {\small
+    \href{mailto:lantiangmftby@gmail.com}{lantiangmftby@gmail.com} \quad$\vert$\quad
+    \href{https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN}{Google Scholar} \quad$\vert$\quad
+    \href{https://github.com/gmftbyGMFTBY}{GitHub: gmftbyGMFTBY} \quad$\vert$\quad
+    \href{https://lantiangmftby.github.io/}{Homepage}
+  }\\[2pt]
+  {\small\color{muted} IEEE Membership No.: \underline{\hspace{3.2cm}} (fill in) \quad$\vert$\quad Candidate field: Computer Science / Artificial Intelligence}
+\end{center}
+
+\vspace{4pt}
+{\small\color{muted}\itshape
+This document follows the structure recommended for IEEE Senior Member elevation packages: (1) education and employment listed with month/year and duties, (2) an explicit tally of the ten-year professional-practice requirement (IEEE Bylaw I-104.3), and (3) a dedicated ``Significant Performance'' section with discrete, dated project write-ups covering at least 60 months. All dates below should be independently verified before submission to \href{https://nominate.ieee.org}{nominate.ieee.org}.
+}
+
+\vspace{6pt}
+{\small\color{accent}\bfseries Before submitting, please double-check these dates (source documents disagree slightly):}\\
+{\small\color{muted}
+IBM Research China months (shown as Jun.--Aug. 2019, not otherwise documented) $\cdot$
+Tencent AI Lab end date (Jan. 2023 here vs. Mar. 2023 in an earlier resume) $\cdot$
+miHoYo dates (Feb.--Jun. 2023 here vs. Mar.--Jul. 2023 in an earlier resume) $\cdot$
+Shanghai AI Lab end date (Jan. 2025 here vs. Jul. 2024 in the 2026 visa CV).
+}
+
+% ---------------- Profile ----------------
+\cvsection{Profile}
+I am currently an Algorithm Expert at Alibaba Group (Token Hub · MaaS), focusing on automatic evaluation and long-horizon agent technologies for large language models, spanning both frontier research and real-world business applications. I received my Ph.D. in Computer Science and Technology from Beijing Institute of Technology, advised by Prof. Xian-Ling Mao, and have published 20+ peer-reviewed papers at venues including ACL, EMNLP, NeurIPS, ICLR, ICML, and SIGKDD, accumulating 1{,}700+ citations.
+
+% ---------------- Eligibility summary ----------------
+\cvsection{Summary for the Admission \& Advancement Review Panel}
+\textbf{Field:} Computer Science and Information Technology (Natural Language Processing / Machine Learning), an IEEE-designated field.\\
+\textbf{Ten years of professional practice:} B.Eng. (Beijing Institute of Technology, Sep. 2015 -- Jun. 2019) credited as \textbf{3 years}, plus continuous professional research practice (industrial research internships and Ph.D.-level research with a sustained publication record) from \textbf{Jul. 2019 to present} ($\sim$7 years as of Aug. 2026) $\Rightarrow$ \textbf{total $\approx$ 10 years and growing}.\\
+\textbf{Five years (60+ months) of significant performance:} Jun. 2021 -- present ($\sim$62 months), documented in the ``Significant Performance'' section below via three discrete, dated projects.\\
+\textbf{References:} to be provided by three current IEEE Senior Members / Fellows / Honorary Members familiar with the candidate's work.
+
+% ---------------- Education ----------------
+\cvsection{Education}
+
+\textbf{Beijing Institute of Technology} --- Beijing, China\\
+Ph.D. in Computer Science and Technology (Combined Master--Ph.D. Program) \hfill \textit{Sep. 2019 -- Jun. 2025}\\
+Advisor: Prof. Xian-Ling Mao. Dissertation area: automatic evaluation of text generation and LLMs. Successfully defended dissertation on Jun. 20, 2025.
+
+\vspace{4pt}
+\textbf{Beijing Institute of Technology} --- Beijing, China\\
+B.Eng. in Computer Science and Technology \hfill \textit{Sep. 2015 -- Jun. 2019}\\
+\textit{(Credited as 3 years toward the ten-year professional-practice requirement.)}
+
+% ---------------- Professional Experience ----------------
+\cvsection{Professional Experience (Employment History)}
+
+\textbf{Alibaba Group} --- Hangzhou, China {\small\color{accent}(Full-time employment)}\\
+\textit{Algorithm Expert, Token Hub (ATH) -- MaaS, Agent Systems} \hfill \textit{Aug. 2025 -- Present}
+\begin{itemize}
+  \item Lead researcher for agentic-AI evaluation and long-horizon agent research within Alibaba's Marco DeepResearch initiative.
+  \item Design large-scale agent benchmarks (e.g., HSCodeComp, Table-as-Search) and direct their end-to-end research, from problem formulation and expert-panel data annotation to publication and open-source release.
+  \item Coordinate a cross-functional team including annotators, engineers, and co-authors across research and product organizations.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Tencent TEG} --- Shenzhen, China {\small\color{muted}(Internship)}\\
+\textit{Research Intern, AI Platform Department} \hfill \textit{Apr. 2025 -- Jun. 2025}
+\begin{itemize}
+  \item Conducted research on AI applications in gaming and contributed to the Block-Attention efficient-prefilling method (ICLR 2025).
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Shanghai Artificial Intelligence Laboratory} --- Shanghai, China {\small\color{muted}(Internship)}\\
+\textit{Research Intern, InternLM Post-training Group} \hfill \textit{Jul. 2023 -- Jan. 2025}
+\begin{itemize}
+  \item Designed and led \textbf{CriticEval}, a systematic benchmark for evaluating large language models' critique ability (four dimensions, nine scenarios); results published at NeurIPS 2024.
+  \item Proposed a multi-agent feedback framework for training language models to critique, adopted in the post-training pipeline of the open-sourced InternLM model family; published at EMNLP 2025 (Findings).
+\end{itemize}
+
+\vspace{4pt}
+\textbf{miHoYo} --- Shanghai, China {\small\color{muted}(Internship)}\\
+\textit{Research Intern, Natural Language Processing Lab} \hfill \textit{Feb. 2023 -- Jun. 2023}
+\begin{itemize}
+  \item Developed AI applications for gaming environments and domain-specific model post-training pipelines.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Tencent AI Lab} --- Shenzhen, China {\small\color{muted}(Internship)}\\
+\textit{Research Intern} \hfill \textit{Jun. 2021 -- Jan. 2023}
+\begin{itemize}
+  \item Designed the Copy-Generator architecture (\textit{Copy is All You Need}), a copy-based neural text-generation paradigm; published at ICLR 2023.
+  \item Co-developed the Contrastive Search / SimCTG decoding method (NeurIPS 2022, Spotlight); the method was subsequently adopted as a built-in decoding strategy in HuggingFace's \texttt{transformers} library (v4.24.0), a widely used open-source machine-learning framework.
+  \item Contributed to Effidit, Tencent AI Lab's AI-powered writing-assistant product.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{IBM Research -- China} --- Beijing, China {\small\color{muted}(Internship)}\\
+\textit{Research Intern} \hfill \textit{Jun. 2019 -- Aug. 2019}
+\begin{itemize}
+  \item Conducted research on dialogue systems.
+\end{itemize}
+
+\vspace{2pt}
+{\small\color{muted}\itshape Note: all positions prior to Alibaba Group (Tencent AI Lab, Tencent TEG, Shanghai AI Lab, miHoYo, IBM Research China) were research internships undertaken alongside full-time Ph.D. study; Alibaba Group (Aug. 2025 -- present) is my first full-time employment. Sep. 2019 -- Jun. 2025 overlaps with full-time Ph.D. study at Beijing Institute of Technology. Per IEEE guidance, this period is counted once, as continuous professional research practice (not additionally claimed as doctoral-degree credit), consistent with sustained industrial research internships and an uninterrupted, published research record throughout.}
+
+% ---------------- Significant Performance ----------------
+\cvsection{Significant Performance (60+ Months)}
+
+\textbf{1. Efficient and copy-augmented text generation --- Tencent AI Lab} \hfill \textit{Jun. 2021 -- Jan. 2023 (20 months)}\\
+\textbf{Task:} Improve the efficiency and factual grounding of neural text generation.
+\textbf{My role:} Sole technical lead; designed the Copy-Generator retrieval-augmented decoding architecture and co-designed the Contrastive Search decoding algorithm.
+\textbf{Why significant:} Copy-Generator was published at ICLR 2023 (180+ GitHub stars); Contrastive Search was adopted into HuggingFace \texttt{transformers} (v4.24.0) as an official decoding method and is now used by practitioners worldwide, with the associated paper (NeurIPS 2022, Spotlight) cited 460+ times.
+
+\vspace{6pt}
+\textbf{2. LLM critique-ability evaluation and training --- Shanghai AI Laboratory} \hfill \textit{Jul. 2023 -- Jan. 2025 (19 months)}\\
+\textbf{Task:} Establish a rigorous methodology to measure and improve large language models' ability to critique their own or others' outputs.
+\textbf{My role:} Principal investigator; designed the CriticEval benchmark (4 dimensions $\times$ 9 scenarios) and a multi-agent feedback framework for critique training.
+\textbf{Why significant:} CriticEval (NeurIPS 2024) became a reference benchmark for LLM self-critique research and was applied in the post-training of the open-sourced InternLM model family; the follow-up training method was published at EMNLP 2025 (Findings).
+
+\vspace{6pt}
+\textbf{3. Expert-level agent benchmarking and DeepResearch agents --- Alibaba Group} \hfill \textit{Aug. 2025 -- present (12+ months)}\\
+\textbf{Task:} Evaluate and improve LLM agents' ability to apply complex, expert-written hierarchical rules (e.g., customs/tariff classification) and to perform long-horizon information seeking.
+\textbf{My role:} Project lead; directed a panel of 26 domain experts to construct HSCodeComp and benchmarked 23 LLMs/agents; designed the Table-as-Search agentic information-seeking framework; contributed to Alibaba's Marco DeepResearch agent stack.
+\textbf{Why significant:} HSCodeComp received the \textbf{ACL 2026 Best Resource Award} (top resource paper among 12{,}148 submissions); both works were released as open-source benchmarks/frameworks adopted internally for agent evaluation at Alibaba.
+
+% ---------------- Publications ----------------
+\cvsection{Bibliography (Selected, 1{,}700+ citations on Google Scholar)}
+{\small \textit{$^{*}$ indicates equal contribution.}}\par\vspace{4pt}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Yiqian Yang$^{*}$, Qianghuai Jia, Li Zhu, Hui Jiang, Hang Zhu, Weihua Luo, Longyue Wang. \textit{HSCodeComp: A Realistic and Expert-level Agent Benchmark for Hierarchical Rule Application.} \venue{ACL 2026}. \textbf{Best Resource Award.}}
+
+\pubitem{\textbf{Tian Lan}, Felix Henry, Bin Zhu, Qianghuai Jia, Junyang Ren, Qihang Pu, Haijun Li, Longyue Wang, Zhao Xu, Weihua Luo. \textit{Table-as-Search: Agentic Information Seeking is Table Completion.} \venue{ACL 2026, Findings}.}
+
+\pubitem{Yongshi Ye, Hui Jiang, Feihu Jiang, \textbf{Tian Lan}, Yichao Du, Biao Fu, Xiaodong Shi, Qianghuai Jia, Longyue Wang, Weihua Luo. \textit{UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory.} \venue{ICML 2026}.}
+
+\pubitem{Rong-Cheng Tu$^{*}$, Zi-Ao Ma$^{*}$, \textbf{Tian Lan}$^{*}$, Yuehao Zhao$^{*}$, Heyan Huang, Xian-Ling Mao. \textit{Automatic Evaluation for Text-to-image Generation: Task-decomposed Framework, Distilled Training, and Meta-evaluation Benchmark.} \venue{ACL 2025}.}
+
+\pubitem{Dongyang Ma, Yan Wang, \textbf{Tian Lan}. \textit{Block-Attention for Efficient Prefilling.} \venue{ICLR 2025}.}
+
+\pubitem{Chen Xu, \textbf{Tian Lan}, Yu Ji, Changlong Yu, Wei Wang, Jun Gao, Qunxi Dong, Kun Qian, Piji Li, Wei Bi, Bin Hu. \textit{Decider: A Dual-System Rule-Controllable Decoding Framework for Language Generation.} \venue{IEEE Transactions on Knowledge and Data Engineering (TKDE), 2025}.}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Wenwei Zhang$^{*}$, Chengqi Lyu, Shuaibin Li, Chen Xu, Heyan Huang, Dahua Lin, Xian-Ling Mao, Kai Chen. \textit{Training Language Models to Critique With Multi-agent Feedback.} \venue{EMNLP 2025, Findings}.}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Wenwei Zhang$^{*}$, Chen Xu, Heyan Huang, Dahua Lin, Kai Chen, Xian-Ling Mao. \textit{CriticEval: Evaluating Large-scale Language Model as Critic.} \venue{NeurIPS 2024}.}
+
+\pubitem{Tian-Yi Che, Xian-Ling Mao, \textbf{Tian Lan}, Heyan Huang. \textit{A Hierarchical Context Augmentation Method to Improve Retrieval-Augmented LLMs on Scientific Papers.} \venue{SIGKDD 2024}.}
+
+\pubitem{\textbf{Tian Lan}, Deng Cai, Yan Wang, Yixuan Su, Heyan Huang, Xian-Ling Mao. \textit{Exploring Dense Retrieval for Dialogue Response Selection.} \venue{ACM Transactions on Information Systems (TOIS), 2024}.}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Deng Cai$^{*}$, Yan Wang, Heyan Huang, Xian-Ling Mao. \textit{Copy is All You Need.} \venue{ICLR 2023}.}
+
+\pubitem{Yixuan Su, \textbf{Tian Lan}, Yan Wang, Dani Yogatama, Lingpeng Kong, Nigel Collier. \textit{A Contrastive Framework for Neural Text Generation.} \venue{NeurIPS 2022, Spotlight}.}
+
+\pubitem{\textbf{Tian Lan}, Xian-Ling Mao, Wei Wei, Xiaoyan Gao, Heyan Huang. \textit{PONE: A Novel Automatic Evaluation Metric for Open-Domain Generative Dialogue Systems.} \venue{ACM TOIS 2020}.}
+
+{\small\itshape Full publication list (20+ peer-reviewed papers at ACL, EMNLP, NeurIPS, ICLR, ICML, SIGKDD, IEEE TKDE, IEEE TIP, ACM TOIS, etc.) available at \href{https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN}{Google Scholar}.}
+
+% ---------------- Honors ----------------
+\cvsection{Honors \& Awards}
+\begin{itemize}
+  \item ACL 2026 Best Resource Award --- for HSCodeComp (top resource paper, 12{,}148 submissions).
+  \item Alistar --- Alibaba Group's flagship campus recruitment program, 2025.
+  \item National Scholarship --- Beijing Institute of Technology, 2024 (Ph.D.).
+  \item Tencent Qingyun Program --- Tencent, 2025.
+  \item Tencent Rhino-Bird Elite Intern Program --- Tencent, 2022.
+  \item National Scholarship --- Beijing Institute of Technology, 2017 (undergraduate).
+\end{itemize}
+
+% ---------------- Service ----------------
+\cvsection{Contributions to the Profession}
+\begin{itemize}
+  \item Peer reviewer for ICLR, AAAI, NeurIPS, ACL Rolling Review (ARR), ICML, and ACM TOIS.
+  \item Open-source contributions with sustained community adoption: Contrastive Search (merged into HuggingFace \texttt{transformers}), Copy-is-All-You-Need, CriticEval, PandaGPT, InternLM2, HammerLLM, Mozi-LLM.
+  \item Invited talks: ACL 2026 (Alibaba Cloud, Jul. 2026); China Generative AI Summit 2026 (Apr. 2026); 1st CCF Conference on LLMs \& AI Engineering (Apr. 2025).
+\end{itemize}
+
+\end{document}

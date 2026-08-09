@@ -2,3 +2,18 @@
 Thumbs.db
 *.log
 .vscode/
+
+# LaTeX build artifacts (compiled PDFs live under assets/files/cv/, not here)
+cv/*.aux
+cv/*.out
+cv/*.synctex.gz
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.pdf.png
+cv/preview_*.png
+cv/*.pdf
+
+# Sensitive personal documents — must NEVER be published on GitHub Pages
+# (contains passport no., DS-160 no., marriage certificate, financial letters, etc.)
+assets/lantian_check.pdf
+assets/Tian_Lan_Chinese_Resume.pdf

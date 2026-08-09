@@ -1,0 +1,211 @@
+% ============================================================
+% Tian Lan (兰天) — General Curriculum Vitae
+% Compile with: xelatex Tian_Lan_CV.tex
+% ============================================================
+\documentclass[10.5pt]{article}
+
+\usepackage[margin=0.85in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{microtype}
+
+\setmainfont{Charter}
+\newfontfamily\headingfont{Avenir Next Demi Bold}
+\newfontfamily\cjkfont{Songti SC}
+
+\definecolor{accent}{HTML}{1f7a52}
+\definecolor{muted}{HTML}{5b6570}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\leftmargini}{1.2em}
+\renewcommand{\labelitemi}{\raisebox{0.15em}{\tiny\textbullet}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={Tian Lan - Curriculum Vitae},
+  pdfauthor={Tian Lan}
+}
+
+% ---------- 自定义 section 标题：小写字母间距 + 顶部细线 ----------
+\newcommand{\cvsection}[1]{%
+  \vspace{10pt}
+  {\color{accent}\headingfont\Large #1}\par
+  \vspace{2pt}
+  {\color{accent}\hrule height 1pt}
+  \vspace{6pt}
+}
+
+\newcommand{\entry}[3]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & {\color{muted}\small #2} \\
+  \end{tabularx}
+  #3
+}
+
+\newcommand{\pubitem}[1]{\par\noindent\hangindent=1.2em\hangafter=1 #1\par\vspace{4pt}}
+\newcommand{\venue}[1]{\textbf{\color{accent}#1}}
+\newcommand{\projlink}[1]{\small\color{accent}[#1]}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ---------------- Header ----------------
+\begin{center}
+  {\headingfont\fontsize{24}{28}\selectfont Tian Lan} \quad {\cjkfont\fontsize{16}{20}\selectfont（兰天）}\\[4pt]
+  {\color{muted} Algorithm Expert, Alibaba Group (Token Hub · MaaS) \quad$\vert$\quad Ph.D., Beijing Institute of Technology}\\[4pt]
+  {\small
+    \href{mailto:lantiangmftby@gmail.com}{lantiangmftby@gmail.com} \quad$\vert$\quad
+    \href{https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN}{Google Scholar} \quad$\vert$\quad
+    \href{https://github.com/gmftbyGMFTBY}{GitHub: gmftbyGMFTBY} \quad$\vert$\quad
+    \href{https://lantiangmftby.github.io/}{Homepage}
+  }
+\end{center}
+
+% ---------------- Profile ----------------
+\cvsection{Profile}
+I am currently an Algorithm Expert at Alibaba Group (Token Hub · MaaS), focusing on automatic evaluation and long-horizon agent technologies, driving both frontier research and real-world business applications. I joined Alibaba as a full-time employee through the 2025 Alistar ({\cjkfont 阿里星}) campus recruitment program. I received my Ph.D. in Computer Science and Technology from Beijing Institute of Technology, advised by Prof. Xian-Ling Mao ({\cjkfont 毛先领}); during my research internships I was primarily mentored by Yan Wang ({\cjkfont 王琰}).
+
+My work spans both academia and industry: I have published at top-tier AI venues including ICLR, NeurIPS, ICML, ACL, EMNLP, ACM MM, SIGKDD, and TOIS, with representative works such as \textit{Copy is All You Need}, \textit{Block-Attention}, and \textit{Contrastive Search}, accumulating over 1{,}700 citations on Google Scholar.
+
+% ---------------- Research Interests ----------------
+\cvsection{Research Interests}
+Automatic evaluation of generative models, long-horizon LLM agents (agentic search, agentic memory), retrieval-augmented text generation, and efficient LLM inference/decoding.
+
+% ---------------- Education ----------------
+\cvsection{Education}
+
+\entry{Beijing Institute of Technology (BIT)}{Beijing, China}{}
+Ph.D. in Computer Science and Technology (Combined Master--Ph.D. Program) \hfill \textit{Sep. 2019 -- Jun. 2025}\\
+Advisor: Prof. Xian-Ling Mao ({\cjkfont 毛先领}); DataHammer Lab. Successfully defended dissertation on Jun. 20, 2025.
+\vspace{4pt}
+
+\entry{Beijing Institute of Technology (BIT)}{Beijing, China}{}
+B.Eng. in Computer Science and Technology \hfill \textit{Sep. 2015 -- Jun. 2019}
+
+% ---------------- Experience ----------------
+\cvsection{Research \& Industry Experience}
+
+\textbf{Alibaba Group --- Algorithm Expert} {\small\color{accent}(Full-time)} \hfill \textit{2025 -- Present}\\
+Token Hub (ATH) -- MaaS, Agent Systems. Joined via the 2025 Alistar ({\cjkfont 阿里星}) campus recruitment program. Mentors: Longyue Wang, Weihua Luo.
+\begin{itemize}
+  \item Lead researcher on \textbf{Marco DeepResearch}, Alibaba's flagship agentic-research effort (agentic harness, agentic memory, agentic search, self-evolving skills).
+  \item Designed \textbf{HSCodeComp}, an expert-level hierarchical-rule-application agent benchmark with 26 tariff experts and 23 evaluated LLMs/agents; received the \textbf{ACL 2026 Best Resource Award}.
+  \item Proposed \textbf{Table-as-Search}, a structured table-completion paradigm unifying Deep/Wide/DeepWide agentic information seeking.
+\end{itemize}
+
+\textbf{Tencent TEG --- Research Intern} {\small\color{muted}(Intern)} \hfill \textit{Apr. 2025 -- Jun. 2025}\\
+AI Platform Department. Research on AI applications in gaming.
+\begin{itemize}
+  \item Contributed to \textbf{Block-Attention} (ICLR 2025), a block-wise attention mechanism accelerating prefilling for retrieval-augmented LLM inference.
+\end{itemize}
+
+\textbf{Shanghai Artificial Intelligence Laboratory --- Research Intern} {\small\color{muted}(Intern)} \hfill \textit{Jul. 2023 -- Jan. 2025}\\
+InternLM Post-training Group. Mentor: Wenwei Zhang.
+\begin{itemize}
+  \item Built \textbf{CriticEval} (NeurIPS 2024), the first systematic benchmark for evaluating LLM critique ability across four dimensions and nine scenarios.
+  \item Proposed a multi-agent feedback framework for training LLMs to critique (EMNLP 2025 Findings), adopted in InternLM post-training.
+\end{itemize}
+
+\textbf{miHoYo --- NLP Lab, Research Intern} {\small\color{muted}(Intern)} \hfill \textit{Feb. 2023 -- Jun. 2023}\\
+Game AI and domain-specific model post-training. Mentor: Yan Wang.
+
+\textbf{Tencent AI Lab --- Research Intern} {\small\color{muted}(Intern)} \hfill \textit{Jun. 2021 -- Jan. 2023}\\
+Text generation and retrieval-augmented generation. Contributed to \href{https://effidit.qq.com}{Effidit}, Tencent AI Lab's AI-powered writing assistant. Mentors: Yan Wang, Deng Cai.
+\begin{itemize}
+  \item Proposed \textbf{Copy-Generator} (\textit{Copy is All You Need}, ICLR 2023), a copy-based text-generation paradigm.
+  \item Co-developed \textbf{Contrastive Search / SimCTG} (NeurIPS 2022, Spotlight); the decoding method was later integrated into HuggingFace \texttt{transformers} (v4.24.0) as a built-in decoding strategy.
+\end{itemize}
+
+\textbf{IBM Research --- China --- Research Intern} {\small\color{muted}(Intern)} \hfill \textit{2019}\\
+Dialogue systems.
+
+\vspace{4pt}
+{\small\itshape\color{muted} Note: all positions prior to Alibaba Group were research internships; Alibaba Group (2025 -- present) is my first full-time role.}
+
+% ---------------- Publications ----------------
+\cvsection{Selected Publications \small\normalfont(full list on \href{https://scholar.google.com/citations?user=B0W47gsAAAAJ&hl=zh-CN}{Google Scholar}, 1{,}700+ citations)}
+{\small \textit{$^{*}$ indicates equal contribution.}}\par\vspace{4pt}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Yiqian Yang$^{*}$, Qianghuai Jia, Li Zhu, Hui Jiang, Hang Zhu, Weihua Luo, Longyue Wang. \textit{HSCodeComp: A Realistic and Expert-level Agent Benchmark for Hierarchical Rule Application.} \venue{ACL 2026}. \textbf{Best Resource Award.}}
+
+\pubitem{\textbf{Tian Lan}, Felix Henry, Bin Zhu, Qianghuai Jia, Junyang Ren, Qihang Pu, Haijun Li, Longyue Wang, Zhao Xu, Weihua Luo. \textit{Table-as-Search: Agentic Information Seeking is Table Completion.} \venue{ACL 2026, Findings}.}
+
+\pubitem{Yongshi Ye, Hui Jiang, Feihu Jiang, \textbf{Tian Lan}, Yichao Du, Biao Fu, Xiaodong Shi, Qianghuai Jia, Longyue Wang, Weihua Luo. \textit{UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory.} \venue{ICML 2026}.}
+
+\pubitem{Rong-Cheng Tu$^{*}$, Zi-Ao Ma$^{*}$, \textbf{Tian Lan}$^{*}$, Yuehao Zhao$^{*}$, Heyan Huang, Xian-Ling Mao. \textit{Automatic Evaluation for Text-to-image Generation: Task-decomposed Framework, Distilled Training, and Meta-evaluation Benchmark.} \venue{ACL 2025}.}
+
+\pubitem{Yi-Fan Lu, Xian-Ling Mao, \textbf{Tian Lan}, Tong Zhang, Yu-Shi Zhu, Heyan Huang. \textit{SEOE: A Scalable and Reliable Semantic Evaluation Framework for Open Domain Event Detection.} \venue{ACL 2025}.}
+
+\pubitem{Dongyang Ma, Yan Wang, \textbf{Tian Lan}. \textit{Block-Attention for Efficient Prefilling.} \venue{ICLR 2025}.}
+
+\pubitem{Chen Xu, \textbf{Tian Lan}, Yu Ji, Changlong Yu, Wei Wang, Jun Gao, Qunxi Dong, Kun Qian, Piji Li, Wei Bi, Bin Hu. \textit{Decider: A Dual-System Rule-Controllable Decoding Framework for Language Generation.} \venue{IEEE TKDE 2025}.}
+
+\pubitem{Shu-Hang Liu, \textbf{Tian Lan}, Yun-He Zhang, Ran Liu, Heyan Huang, Chen Xu, Zhijing Wu, Xian-Ling Mao. \textit{Automatic Evaluating Scientific Reviews Through Meta-reviewer's Lens: A Reliable Benchmark for Peer Review Generation.} \venue{NLPCC 2025}.}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Wenwei Zhang$^{*}$, Chengqi Lyu, Shuaibin Li, Chen Xu, Heyan Huang, Dahua Lin, Xian-Ling Mao, Kai Chen. \textit{Training Language Models to Critique With Multi-agent Feedback.} \venue{EMNLP 2025, Findings}.}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Wenwei Zhang$^{*}$, Chen Xu, Heyan Huang, Dahua Lin, Kai Chen, Xian-Ling Mao. \textit{CriticEval: Evaluating Large-scale Language Model as Critic.} \venue{NeurIPS 2024}.}
+
+\pubitem{Tian-Yi Che, Xian-Ling Mao, \textbf{Tian Lan}, Heyan Huang. \textit{A Hierarchical Context Augmentation Method to Improve Retrieval-Augmented LLMs on Scientific Papers.} \venue{SIGKDD 2024}.}
+
+\pubitem{\textbf{Tian Lan}, Deng Cai, Yan Wang, Yixuan Su, Heyan Huang, Xian-Ling Mao. \textit{Exploring Dense Retrieval for Dialogue Response Selection.} \venue{ACM TOIS 2024}.}
+
+\pubitem{Huayang Li, \textbf{Tian Lan}, Zihao Fu, Deng Cai, Lemao Liu, Nigel Collier, Taro Watanabe, Yixuan Su. \textit{Repetition In Repetition Out: Towards Understanding Neural Text Degeneration from the Data Perspective.} \venue{NeurIPS 2023}.}
+
+\pubitem{\textbf{Tian Lan}, Xian-Ling Mao, Wei Wei, Xiaoyan Gao, Heyan Huang. \textit{Towards Efficient Coarse-grained Dialogue Response Selection.} \venue{ACM TOIS 2023}.}
+
+\pubitem{\textbf{Tian Lan}$^{*}$, Deng Cai$^{*}$, Yan Wang, Heyan Huang, Xian-Ling Mao. \textit{Copy is All You Need.} \venue{ICLR 2023}.}
+
+\pubitem{Yixuan Su, \textbf{Tian Lan}, Yan Wang, Dani Yogatama, Lingpeng Kong, Nigel Collier. \textit{A Contrastive Framework for Neural Text Generation.} \venue{NeurIPS 2022, Spotlight}.}
+
+\pubitem{Heqi Zheng$^{*}$, Xiao Zhang$^{*}$, Zewen Chi$^{*}$, Heyan Huang, Yan Tan, \textbf{Tian Lan}, Wei Wei, Xian-Ling Mao. \textit{Cross-Lingual Phrase Retrieval.} \venue{ACL 2022}.}
+
+\pubitem{Yixuan Su, Fangyu Liu, Zaiqiao Meng, \textbf{Tian Lan}, Lei Shu, Ehsan Shareghi, Nigel Collier. \textit{TaCL: Improving BERT Pre-training with Token-Aware Contrastive Learning.} \venue{NAACL 2022, Findings}.}
+
+\pubitem{\textbf{Tian Lan}, Xian-Ling Mao, Wei Wei, Xiaoyan Gao, Heyan Huang. \textit{PONE: A Novel Automatic Evaluation Metric for Open-Domain Generative Dialogue Systems.} \venue{ACM TOIS 2020}.}
+
+% ---------------- Projects ----------------
+\cvsection{Open-Source Projects \& Impact}
+\begin{itemize}
+  \item \textbf{Marco DeepResearch} --- Alibaba's agentic DeepResearch stack (agentic harness, memory, search). \href{https://github.com/AIDC-AI/Marco-DeepResearch/}{\projlink{GitHub}}
+  \item \textbf{Contrastive Search / SimCTG} --- decoding algorithm integrated into HuggingFace \texttt{transformers} (v4.24.0); 460+ GitHub stars. \href{https://github.com/yxuansu/SimCTG}{\projlink{GitHub}} \href{https://huggingface.co/blog/introducing-csearch}{\projlink{HF Blog}}
+  \item \textbf{Copy-is-All-You-Need} --- ICLR 2023; 180+ GitHub stars. \href{https://github.com/gmftbyGMFTBY/Copyisallyouneed}{\projlink{GitHub}}
+  \item \textbf{CriticEval} --- open-sourced under OpenCompass/InternLM. \href{https://github.com/open-compass/CriticEval}{\projlink{GitHub}}
+  \item \textbf{PandaGPT} --- general-purpose multi-modal instruction-following model; 750+ GitHub stars. \href{https://panda-gpt.github.io/}{\projlink{Website}}
+  \item \textbf{InternLM2} --- contributor to Shanghai AI Lab's open-source LLM. \href{https://arxiv.org/abs/2403.17297}{\projlink{arXiv}}
+  \item \textbf{HammerLLM} --- 1.4B-parameter efficient LLM pre-training framework (DataHammer Lab). \href{https://github.com/Academic-Hammer/HammerLLM}{\projlink{GitHub}}
+  \item \textbf{Mozi-LLM (science-llm)} --- retrieval-augmented LLM toolkit for scientific literature; 120+ GitHub stars. \href{https://github.com/gmftbyGMFTBY/science-llm}{\projlink{GitHub}}
+\end{itemize}
+
+% ---------------- Awards ----------------
+\cvsection{Awards \& Honors}
+\begin{itemize}
+  \item ACL 2026 Best Resource Award --- for HSCodeComp.
+  \item Alistar ({\cjkfont 阿里星}) --- Alibaba Group, 2025.
+  \item National Scholarship ({\cjkfont 国家奖学金}) --- Beijing Institute of Technology, 2024.
+  \item Tencent Qingyun Program ({\cjkfont 腾讯青云计划}) --- Tencent, 2025.
+  \item Tencent Rhino-Bird Elite Intern Program ({\cjkfont 腾讯犀牛鸟计划菁英实习生}) --- Tencent, 2022.
+  \item National Scholarship ({\cjkfont 国家奖学金}) --- Beijing Institute of Technology, 2017.
+\end{itemize}
+
+% ---------------- Service ----------------
+\cvsection{Academic Service}
+Peer reviewer for ICLR, AAAI, NeurIPS, ACL Rolling Review (ARR), ICML, and ACM TOIS.
+
+% ---------------- Talks ----------------
+\cvsection{Invited Talks}
+\begin{itemize}
+  \item \textit{DeepResearch Agent} --- Invited talk (Alibaba Cloud) at ACL 2026. Jul. 2026.
+  \item \textit{UMEM} --- Invited talk at the China Generative AI Summit 2026. Apr. 2026.
+  \item \textit{DeepResearch Agent} --- 1st CCF Conference on Large Language Models \& AI Engineering. Apr. 2025.
+\end{itemize}
+
+\end{document}
